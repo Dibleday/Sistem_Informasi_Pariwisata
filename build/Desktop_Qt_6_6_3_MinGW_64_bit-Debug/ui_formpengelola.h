@@ -12,9 +12,11 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -34,15 +36,16 @@ public:
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
+    QTableView *tablepengelola;
 
     void setupUi(QWidget *formpengelola)
     {
         if (formpengelola->objectName().isEmpty())
             formpengelola->setObjectName("formpengelola");
-        formpengelola->resize(400, 300);
+        formpengelola->resize(442, 289);
         formLayoutWidget = new QWidget(formpengelola);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(60, 20, 291, 91));
+        formLayoutWidget->setGeometry(QRect(10, 10, 291, 91));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
@@ -78,16 +81,19 @@ public:
 
         pushButton = new QPushButton(formpengelola);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(60, 120, 121, 24));
+        pushButton->setGeometry(QRect(310, 10, 121, 21));
         pushButton_2 = new QPushButton(formpengelola);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(230, 120, 121, 24));
+        pushButton_2->setGeometry(QRect(310, 30, 121, 21));
         pushButton_3 = new QPushButton(formpengelola);
         pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(60, 150, 121, 24));
+        pushButton_3->setGeometry(QRect(310, 50, 121, 21));
         pushButton_4 = new QPushButton(formpengelola);
         pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(230, 150, 121, 24));
+        pushButton_4->setGeometry(QRect(310, 70, 121, 21));
+        tablepengelola = new QTableView(formpengelola);
+        tablepengelola->setObjectName("tablepengelola");
+        tablepengelola->setGeometry(QRect(10, 100, 421, 181));
 
         retranslateUi(formpengelola);
 
@@ -97,9 +103,9 @@ public:
     void retranslateUi(QWidget *formpengelola)
     {
         formpengelola->setWindowTitle(QCoreApplication::translate("formpengelola", "Form", nullptr));
-        id_pengelolaLabel->setText(QCoreApplication::translate("formpengelola", "id_pengelola", nullptr));
-        id_lokasiLabel->setText(QCoreApplication::translate("formpengelola", "id_lokasi", nullptr));
-        nama_pengelolaLabel->setText(QCoreApplication::translate("formpengelola", "nama_pengelola", nullptr));
+        id_pengelolaLabel->setText(QCoreApplication::translate("formpengelola", "ID Pengelola", nullptr));
+        id_lokasiLabel->setText(QCoreApplication::translate("formpengelola", "ID Lokasi", nullptr));
+        nama_pengelolaLabel->setText(QCoreApplication::translate("formpengelola", "Nama Pengelola", nullptr));
         pushButton->setText(QCoreApplication::translate("formpengelola", "Simpan", nullptr));
         pushButton_2->setText(QCoreApplication::translate("formpengelola", "Ubah", nullptr));
         pushButton_3->setText(QCoreApplication::translate("formpengelola", "Hapus", nullptr));

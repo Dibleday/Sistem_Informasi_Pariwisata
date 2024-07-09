@@ -8,6 +8,7 @@
 #include <QSqlQuery>
 #include <QDebug>
 #include <QSqlRecord>
+#include <QSqlQueryModel>
 
 namespace Ui {
 class formkecamatan;
@@ -20,6 +21,7 @@ class formkecamatan : public QWidget
 
 public:
     explicit formkecamatan(QWidget *parent = nullptr);
+    void loadtablekecamatan();
     ~formkecamatan();
 
 private slots:
@@ -31,11 +33,14 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void on_tablekecamatan_activated(const QModelIndex &index);
+
 private:
     Ui::formkecamatan *ui;
     QSqlDatabase koneksi;
     QSqlQuery sql;
     QSqlRecord cari;
+    QSqlQueryModel * tabelModel;
 };
 
 #endif // FORMKECAMATAN_H

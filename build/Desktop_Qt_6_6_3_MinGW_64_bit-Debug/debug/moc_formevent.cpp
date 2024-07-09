@@ -43,17 +43,23 @@ constexpr auto qt_meta_stringdata_CLASSformeventENDCLASS = QtMocHelpers::stringD
     "",
     "on_pushButton_2_clicked",
     "on_pushButton_3_clicked",
-    "on_pushButton_4_clicked"
+    "on_pushButton_4_clicked",
+    "on_tableevent_activated",
+    "QModelIndex",
+    "index"
 );
 #else  // !QT_MOC_HAS_STRING_DATA
 struct qt_meta_stringdata_CLASSformeventENDCLASS_t {
-    uint offsetsAndSizes[12];
+    uint offsetsAndSizes[18];
     char stringdata0[10];
     char stringdata1[22];
     char stringdata2[1];
     char stringdata3[24];
     char stringdata4[24];
     char stringdata5[24];
+    char stringdata6[24];
+    char stringdata7[12];
+    char stringdata8[6];
 };
 #define QT_MOC_LITERAL(ofs, len) \
     uint(sizeof(qt_meta_stringdata_CLASSformeventENDCLASS_t::offsetsAndSizes) + ofs), len 
@@ -64,14 +70,20 @@ Q_CONSTINIT static const qt_meta_stringdata_CLASSformeventENDCLASS_t qt_meta_str
         QT_MOC_LITERAL(32, 0),  // ""
         QT_MOC_LITERAL(33, 23),  // "on_pushButton_2_clicked"
         QT_MOC_LITERAL(57, 23),  // "on_pushButton_3_clicked"
-        QT_MOC_LITERAL(81, 23)   // "on_pushButton_4_clicked"
+        QT_MOC_LITERAL(81, 23),  // "on_pushButton_4_clicked"
+        QT_MOC_LITERAL(105, 23),  // "on_tableevent_activated"
+        QT_MOC_LITERAL(129, 11),  // "QModelIndex"
+        QT_MOC_LITERAL(141, 5)   // "index"
     },
     "formevent",
     "on_pushButton_clicked",
     "",
     "on_pushButton_2_clicked",
     "on_pushButton_3_clicked",
-    "on_pushButton_4_clicked"
+    "on_pushButton_4_clicked",
+    "on_tableevent_activated",
+    "QModelIndex",
+    "index"
 };
 #undef QT_MOC_LITERAL
 #endif // !QT_MOC_HAS_STRING_DATA
@@ -83,7 +95,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSformeventENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       4,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -91,16 +103,18 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSformeventENDCLASS[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   38,    2, 0x08,    1 /* Private */,
-       3,    0,   39,    2, 0x08,    2 /* Private */,
-       4,    0,   40,    2, 0x08,    3 /* Private */,
-       5,    0,   41,    2, 0x08,    4 /* Private */,
+       1,    0,   44,    2, 0x08,    1 /* Private */,
+       3,    0,   45,    2, 0x08,    2 /* Private */,
+       4,    0,   46,    2, 0x08,    3 /* Private */,
+       5,    0,   47,    2, 0x08,    4 /* Private */,
+       6,    1,   48,    2, 0x08,    5 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 7,    8,
 
        0        // eod
 };
@@ -121,7 +135,10 @@ Q_CONSTINIT const QMetaObject formevent::staticMetaObject = { {
         // method 'on_pushButton_3_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_pushButton_4_clicked'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'on_tableevent_activated'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QModelIndex &, std::false_type>
     >,
     nullptr
 } };
@@ -136,10 +153,10 @@ void formevent::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 1: _t->on_pushButton_2_clicked(); break;
         case 2: _t->on_pushButton_3_clicked(); break;
         case 3: _t->on_pushButton_4_clicked(); break;
+        case 4: _t->on_tableevent_activated((*reinterpret_cast< std::add_pointer_t<QModelIndex>>(_a[1]))); break;
         default: ;
         }
     }
-    (void)_a;
 }
 
 const QMetaObject *formevent::metaObject() const
@@ -161,13 +178,13 @@ int formevent::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 4)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 4;
+        _id -= 5;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 4)
+        if (_id < 5)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 4;
+        _id -= 5;
     }
     return _id;
 }

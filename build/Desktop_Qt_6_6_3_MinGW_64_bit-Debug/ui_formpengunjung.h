@@ -12,9 +12,11 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -34,12 +36,13 @@ public:
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
+    QTableView *tablepengunjung;
 
     void setupUi(QWidget *formpengunjung)
     {
         if (formpengunjung->objectName().isEmpty())
             formpengunjung->setObjectName("formpengunjung");
-        formpengunjung->resize(400, 300);
+        formpengunjung->resize(554, 289);
         formLayoutWidget = new QWidget(formpengunjung);
         formLayoutWidget->setObjectName("formLayoutWidget");
         formLayoutWidget->setGeometry(QRect(20, 20, 361, 91));
@@ -78,16 +81,19 @@ public:
 
         pushButton = new QPushButton(formpengunjung);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(20, 120, 141, 24));
+        pushButton->setGeometry(QRect(390, 20, 141, 21));
         pushButton_2 = new QPushButton(formpengunjung);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(240, 120, 141, 24));
+        pushButton_2->setGeometry(QRect(390, 40, 141, 21));
         pushButton_3 = new QPushButton(formpengunjung);
         pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(20, 150, 141, 24));
+        pushButton_3->setGeometry(QRect(390, 60, 141, 21));
         pushButton_4 = new QPushButton(formpengunjung);
         pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(240, 150, 141, 24));
+        pushButton_4->setGeometry(QRect(390, 80, 141, 21));
+        tablepengunjung = new QTableView(formpengunjung);
+        tablepengunjung->setObjectName("tablepengunjung");
+        tablepengunjung->setGeometry(QRect(20, 110, 511, 161));
 
         retranslateUi(formpengunjung);
 
@@ -97,9 +103,9 @@ public:
     void retranslateUi(QWidget *formpengunjung)
     {
         formpengunjung->setWindowTitle(QCoreApplication::translate("formpengunjung", "Form", nullptr));
-        id_pengunjungLabel->setText(QCoreApplication::translate("formpengunjung", "id_pengunjung", nullptr));
-        id_lokasiLabel->setText(QCoreApplication::translate("formpengunjung", "id_lokasi", nullptr));
-        nama_pengunjungLabel->setText(QCoreApplication::translate("formpengunjung", "nama_pengunjung", nullptr));
+        id_pengunjungLabel->setText(QCoreApplication::translate("formpengunjung", "ID Pengunjung", nullptr));
+        id_lokasiLabel->setText(QCoreApplication::translate("formpengunjung", "ID Lokasi", nullptr));
+        nama_pengunjungLabel->setText(QCoreApplication::translate("formpengunjung", "Nama Pengunjung", nullptr));
         pushButton->setText(QCoreApplication::translate("formpengunjung", "Simpan", nullptr));
         pushButton_2->setText(QCoreApplication::translate("formpengunjung", "Ubah", nullptr));
         pushButton_3->setText(QCoreApplication::translate("formpengunjung", "Hapus", nullptr));

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>589</width>
+    <height>289</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,9 +16,9 @@
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>30</y>
-     <width>251</width>
+     <x>30</x>
+     <y>20</y>
+     <width>321</width>
      <height>61</height>
     </rect>
    </property>
@@ -26,7 +26,7 @@
     <item row="0" column="0">
      <widget class="QLabel" name="id_kategoriLabel">
       <property name="text">
-       <string>id_kategori</string>
+       <string>ID Kategori</string>
       </property>
      </widget>
     </item>
@@ -36,7 +36,7 @@
     <item row="1" column="0">
      <widget class="QLabel" name="kategoriLabel">
       <property name="text">
-       <string>kategori</string>
+       <string>Kategori</string>
       </property>
      </widget>
     </item>
@@ -48,8 +48,8 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>100</y>
+     <x>360</x>
+     <y>20</y>
      <width>101</width>
      <height>24</height>
     </rect>
@@ -61,8 +61,8 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>100</y>
+     <x>360</x>
+     <y>50</y>
      <width>101</width>
      <height>24</height>
     </rect>
@@ -74,8 +74,8 @@
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>70</x>
-     <y>130</y>
+     <x>460</x>
+     <y>20</y>
      <width>101</width>
      <height>24</height>
     </rect>
@@ -87,14 +87,24 @@
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
-     <x>220</x>
-     <y>130</y>
+     <x>460</x>
+     <y>50</y>
      <width>101</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text">
     <string>Cari</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tablekategori">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>80</y>
+     <width>531</width>
+     <height>192</height>
+    </rect>
    </property>
   </widget>
  </widget>

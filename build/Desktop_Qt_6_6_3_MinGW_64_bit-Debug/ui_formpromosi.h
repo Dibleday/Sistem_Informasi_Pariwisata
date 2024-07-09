@@ -12,9 +12,11 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -27,22 +29,23 @@ public:
     QLabel *id_promosiLabel;
     QLineEdit *id_promosiLineEdit;
     QLabel *id_lokasiLabel;
-    QLineEdit *id_lokasiLineEdit;
     QLabel *nama_promoLabel;
     QLineEdit *nama_promoLineEdit;
+    QLineEdit *id_lokasiLineEdit;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
+    QTableView *tablepromosi;
 
     void setupUi(QWidget *formpromosi)
     {
         if (formpromosi->objectName().isEmpty())
             formpromosi->setObjectName("formpromosi");
-        formpromosi->resize(400, 300);
+        formpromosi->resize(501, 283);
         formLayoutWidget = new QWidget(formpromosi);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(40, 20, 311, 91));
+        formLayoutWidget->setGeometry(QRect(20, 10, 311, 102));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
@@ -61,11 +64,6 @@ public:
 
         formLayout->setWidget(1, QFormLayout::LabelRole, id_lokasiLabel);
 
-        id_lokasiLineEdit = new QLineEdit(formLayoutWidget);
-        id_lokasiLineEdit->setObjectName("id_lokasiLineEdit");
-
-        formLayout->setWidget(1, QFormLayout::FieldRole, id_lokasiLineEdit);
-
         nama_promoLabel = new QLabel(formLayoutWidget);
         nama_promoLabel->setObjectName("nama_promoLabel");
 
@@ -76,18 +74,26 @@ public:
 
         formLayout->setWidget(2, QFormLayout::FieldRole, nama_promoLineEdit);
 
+        id_lokasiLineEdit = new QLineEdit(formLayoutWidget);
+        id_lokasiLineEdit->setObjectName("id_lokasiLineEdit");
+
+        formLayout->setWidget(1, QFormLayout::FieldRole, id_lokasiLineEdit);
+
         pushButton = new QPushButton(formpromosi);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(40, 110, 141, 24));
+        pushButton->setGeometry(QRect(340, 10, 141, 21));
         pushButton_2 = new QPushButton(formpromosi);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(210, 110, 141, 24));
+        pushButton_2->setGeometry(QRect(340, 30, 141, 21));
         pushButton_3 = new QPushButton(formpromosi);
         pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(40, 140, 141, 24));
+        pushButton_3->setGeometry(QRect(340, 50, 141, 21));
         pushButton_4 = new QPushButton(formpromosi);
         pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(210, 140, 141, 24));
+        pushButton_4->setGeometry(QRect(340, 70, 141, 21));
+        tablepromosi = new QTableView(formpromosi);
+        tablepromosi->setObjectName("tablepromosi");
+        tablepromosi->setGeometry(QRect(20, 110, 461, 161));
 
         retranslateUi(formpromosi);
 

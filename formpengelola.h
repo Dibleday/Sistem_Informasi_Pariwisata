@@ -8,6 +8,7 @@
 #include <QSqlQuery>
 #include <QDebug>
 #include <QSqlRecord>
+#include <QSqlQueryModel>
 
 namespace Ui {
 class formpengelola;
@@ -19,6 +20,7 @@ class formpengelola : public QWidget
 
 public:
     explicit formpengelola(QWidget *parent = nullptr);
+    void loadtablepengelola();
     ~formpengelola();
 
 private slots:
@@ -30,11 +32,14 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void on_tablepengelola_activated(const QModelIndex &index);
+
 private:
     Ui::formpengelola *ui;
     QSqlDatabase koneksi;
     QSqlQuery sql;
     QSqlRecord cari;
+    QSqlQueryModel * tabelModel;
 };
 
 #endif // FORMPENGELOLA_H

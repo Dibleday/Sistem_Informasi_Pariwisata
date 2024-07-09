@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
+    <width>481</width>
     <height>300</height>
    </rect>
   </property>
@@ -16,8 +16,8 @@
   <widget class="QWidget" name="formLayoutWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
+     <x>10</x>
+     <y>10</y>
      <width>331</width>
      <height>121</height>
     </rect>
@@ -26,7 +26,7 @@
     <item row="0" column="0">
      <widget class="QLabel" name="id_lokasiLabel">
       <property name="text">
-       <string>id_lokasi</string>
+       <string>ID Lokasi</string>
       </property>
      </widget>
     </item>
@@ -36,7 +36,7 @@
     <item row="1" column="0">
      <widget class="QLabel" name="id_desaLabel">
       <property name="text">
-       <string>id_desa</string>
+       <string>ID Desa</string>
       </property>
      </widget>
     </item>
@@ -46,30 +46,30 @@
     <item row="2" column="0">
      <widget class="QLabel" name="id_kategoriLabel">
       <property name="text">
-       <string>id_kategori</string>
+       <string>ID Kategori</string>
       </property>
      </widget>
-    </item>
-    <item row="2" column="1">
-     <widget class="QLineEdit" name="id_kategoriLineEdit"/>
     </item>
     <item row="3" column="0">
      <widget class="QLabel" name="nama_lokasiLabel">
       <property name="text">
-       <string>nama_lokasi</string>
+       <string>Nama Lokasi</string>
       </property>
      </widget>
     </item>
     <item row="3" column="1">
      <widget class="QLineEdit" name="nama_lokasiLineEdit"/>
     </item>
+    <item row="2" column="1">
+     <widget class="QLineEdit" name="id_kategoriLineEdit"/>
+    </item>
    </layout>
   </widget>
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>140</y>
+     <x>350</x>
+     <y>10</y>
      <width>121</width>
      <height>24</height>
     </rect>
@@ -81,8 +81,8 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>140</y>
+     <x>350</x>
+     <y>40</y>
      <width>121</width>
      <height>24</height>
     </rect>
@@ -94,8 +94,8 @@
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>170</y>
+     <x>350</x>
+     <y>70</y>
      <width>121</width>
      <height>24</height>
     </rect>
@@ -107,14 +107,24 @@
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>170</y>
+     <x>350</x>
+     <y>100</y>
      <width>121</width>
      <height>24</height>
     </rect>
    </property>
    <property name="text">
     <string>Cari</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tablelokasi">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>461</width>
+     <height>161</height>
+    </rect>
    </property>
   </widget>
  </widget>

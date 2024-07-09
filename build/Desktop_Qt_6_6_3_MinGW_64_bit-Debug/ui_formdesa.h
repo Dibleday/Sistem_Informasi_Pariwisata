@@ -12,9 +12,11 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -34,15 +36,16 @@ public:
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
+    QTableView *tabledesa;
 
     void setupUi(QWidget *formdesa)
     {
         if (formdesa->objectName().isEmpty())
             formdesa->setObjectName("formdesa");
-        formdesa->resize(400, 300);
+        formdesa->resize(530, 322);
         formLayoutWidget = new QWidget(formdesa);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(60, 40, 281, 91));
+        formLayoutWidget->setGeometry(QRect(30, 20, 331, 111));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
@@ -78,16 +81,19 @@ public:
 
         pushButton = new QPushButton(formdesa);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(60, 140, 131, 24));
+        pushButton->setGeometry(QRect(370, 20, 131, 21));
         pushButton_2 = new QPushButton(formdesa);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(60, 170, 131, 24));
+        pushButton_2->setGeometry(QRect(370, 80, 131, 21));
         pushButton_3 = new QPushButton(formdesa);
         pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(210, 140, 131, 24));
+        pushButton_3->setGeometry(QRect(370, 50, 131, 21));
         pushButton_4 = new QPushButton(formdesa);
         pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(210, 170, 131, 24));
+        pushButton_4->setGeometry(QRect(370, 110, 131, 21));
+        tabledesa = new QTableView(formdesa);
+        tabledesa->setObjectName("tabledesa");
+        tabledesa->setGeometry(QRect(30, 140, 471, 161));
 
         retranslateUi(formdesa);
 
@@ -97,9 +103,9 @@ public:
     void retranslateUi(QWidget *formdesa)
     {
         formdesa->setWindowTitle(QCoreApplication::translate("formdesa", "Form", nullptr));
-        id_desaLabel->setText(QCoreApplication::translate("formdesa", "id_desa", nullptr));
-        id_kecamatanLabel->setText(QCoreApplication::translate("formdesa", "id_kecamatan", nullptr));
-        nama_kecamatanLabel->setText(QCoreApplication::translate("formdesa", "nama_kecamatan", nullptr));
+        id_desaLabel->setText(QCoreApplication::translate("formdesa", "ID Desa", nullptr));
+        id_kecamatanLabel->setText(QCoreApplication::translate("formdesa", "ID Kecamatan", nullptr));
+        nama_kecamatanLabel->setText(QCoreApplication::translate("formdesa", "Nama Kecamatan", nullptr));
         pushButton->setText(QCoreApplication::translate("formdesa", "Simpan", nullptr));
         pushButton_2->setText(QCoreApplication::translate("formdesa", "Hapus", nullptr));
         pushButton_3->setText(QCoreApplication::translate("formdesa", "Ubah", nullptr));

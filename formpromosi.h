@@ -8,6 +8,7 @@
 #include <QSqlQuery>
 #include <QDebug>
 #include <QSqlRecord>
+#include <QSqlQueryModel>
 
 namespace Ui {
 class formpromosi;
@@ -19,6 +20,7 @@ class formpromosi : public QWidget
 
 public:
     explicit formpromosi(QWidget *parent = nullptr);
+    void loadtablepromosi();
     ~formpromosi();
 
 private slots:
@@ -30,11 +32,14 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void on_tablepromosi_activated(const QModelIndex &index);
+
 private:
     Ui::formpromosi *ui;
     QSqlDatabase koneksi;
     QSqlQuery sql;
     QSqlRecord cari;
+    QSqlQueryModel * tabelModel;
 };
 
 #endif // FORMPROMOSI_H

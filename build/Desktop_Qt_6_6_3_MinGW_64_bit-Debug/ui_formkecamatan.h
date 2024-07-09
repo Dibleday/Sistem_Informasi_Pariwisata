@@ -12,9 +12,11 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -32,15 +34,16 @@ public:
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
+    QTableView *tablekecamatan;
 
     void setupUi(QWidget *formkecamatan)
     {
         if (formkecamatan->objectName().isEmpty())
             formkecamatan->setObjectName("formkecamatan");
-        formkecamatan->resize(400, 300);
+        formkecamatan->resize(490, 278);
         formLayoutWidget = new QWidget(formkecamatan);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(80, 20, 251, 61));
+        formLayoutWidget->setGeometry(QRect(10, 10, 251, 61));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
@@ -66,16 +69,19 @@ public:
 
         pushButton = new QPushButton(formkecamatan);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(80, 90, 101, 24));
+        pushButton->setGeometry(QRect(270, 10, 101, 24));
         pushButton_2 = new QPushButton(formkecamatan);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(230, 90, 101, 24));
+        pushButton_2->setGeometry(QRect(270, 40, 101, 24));
         pushButton_3 = new QPushButton(formkecamatan);
         pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(80, 120, 101, 24));
+        pushButton_3->setGeometry(QRect(380, 10, 101, 24));
         pushButton_4 = new QPushButton(formkecamatan);
         pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(230, 120, 101, 24));
+        pushButton_4->setGeometry(QRect(380, 40, 101, 24));
+        tablekecamatan = new QTableView(formkecamatan);
+        tablekecamatan->setObjectName("tablekecamatan");
+        tablekecamatan->setGeometry(QRect(10, 70, 471, 192));
 
         retranslateUi(formkecamatan);
 
@@ -85,8 +91,8 @@ public:
     void retranslateUi(QWidget *formkecamatan)
     {
         formkecamatan->setWindowTitle(QCoreApplication::translate("formkecamatan", "Form", nullptr));
-        id_kecamatanLabel->setText(QCoreApplication::translate("formkecamatan", "id_kecamatan", nullptr));
-        nama_kecamatanLabel->setText(QCoreApplication::translate("formkecamatan", "nama_kecamatan", nullptr));
+        id_kecamatanLabel->setText(QCoreApplication::translate("formkecamatan", "ID Kecamatan", nullptr));
+        nama_kecamatanLabel->setText(QCoreApplication::translate("formkecamatan", "Nama Kecamatan", nullptr));
         pushButton->setText(QCoreApplication::translate("formkecamatan", "Simpan", nullptr));
         pushButton_2->setText(QCoreApplication::translate("formkecamatan", "Ubah", nullptr));
         pushButton_3->setText(QCoreApplication::translate("formkecamatan", "Hapus", nullptr));

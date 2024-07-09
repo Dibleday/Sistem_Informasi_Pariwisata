@@ -12,9 +12,11 @@
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
+#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
+#include <QtWidgets/QTableView>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -29,22 +31,23 @@ public:
     QLabel *id_desaLabel;
     QLineEdit *id_desaLineEdit;
     QLabel *id_kategoriLabel;
-    QLineEdit *id_kategoriLineEdit;
     QLabel *nama_lokasiLabel;
     QLineEdit *nama_lokasiLineEdit;
+    QLineEdit *id_kategoriLineEdit;
     QPushButton *pushButton;
     QPushButton *pushButton_2;
     QPushButton *pushButton_3;
     QPushButton *pushButton_4;
+    QTableView *tablelokasi;
 
     void setupUi(QWidget *formlokasi)
     {
         if (formlokasi->objectName().isEmpty())
             formlokasi->setObjectName("formlokasi");
-        formlokasi->resize(400, 300);
+        formlokasi->resize(481, 300);
         formLayoutWidget = new QWidget(formlokasi);
         formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(30, 20, 331, 121));
+        formLayoutWidget->setGeometry(QRect(10, 10, 331, 121));
         formLayout = new QFormLayout(formLayoutWidget);
         formLayout->setObjectName("formLayout");
         formLayout->setContentsMargins(0, 0, 0, 0);
@@ -73,11 +76,6 @@ public:
 
         formLayout->setWidget(2, QFormLayout::LabelRole, id_kategoriLabel);
 
-        id_kategoriLineEdit = new QLineEdit(formLayoutWidget);
-        id_kategoriLineEdit->setObjectName("id_kategoriLineEdit");
-
-        formLayout->setWidget(2, QFormLayout::FieldRole, id_kategoriLineEdit);
-
         nama_lokasiLabel = new QLabel(formLayoutWidget);
         nama_lokasiLabel->setObjectName("nama_lokasiLabel");
 
@@ -88,18 +86,26 @@ public:
 
         formLayout->setWidget(3, QFormLayout::FieldRole, nama_lokasiLineEdit);
 
+        id_kategoriLineEdit = new QLineEdit(formLayoutWidget);
+        id_kategoriLineEdit->setObjectName("id_kategoriLineEdit");
+
+        formLayout->setWidget(2, QFormLayout::FieldRole, id_kategoriLineEdit);
+
         pushButton = new QPushButton(formlokasi);
         pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(30, 140, 121, 24));
+        pushButton->setGeometry(QRect(350, 10, 121, 24));
         pushButton_2 = new QPushButton(formlokasi);
         pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setGeometry(QRect(240, 140, 121, 24));
+        pushButton_2->setGeometry(QRect(350, 40, 121, 24));
         pushButton_3 = new QPushButton(formlokasi);
         pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setGeometry(QRect(30, 170, 121, 24));
+        pushButton_3->setGeometry(QRect(350, 70, 121, 24));
         pushButton_4 = new QPushButton(formlokasi);
         pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setGeometry(QRect(240, 170, 121, 24));
+        pushButton_4->setGeometry(QRect(350, 100, 121, 24));
+        tablelokasi = new QTableView(formlokasi);
+        tablelokasi->setObjectName("tablelokasi");
+        tablelokasi->setGeometry(QRect(10, 130, 461, 161));
 
         retranslateUi(formlokasi);
 
@@ -109,10 +115,10 @@ public:
     void retranslateUi(QWidget *formlokasi)
     {
         formlokasi->setWindowTitle(QCoreApplication::translate("formlokasi", "Form", nullptr));
-        id_lokasiLabel->setText(QCoreApplication::translate("formlokasi", "id_lokasi", nullptr));
-        id_desaLabel->setText(QCoreApplication::translate("formlokasi", "id_desa", nullptr));
-        id_kategoriLabel->setText(QCoreApplication::translate("formlokasi", "id_kategori", nullptr));
-        nama_lokasiLabel->setText(QCoreApplication::translate("formlokasi", "nama_lokasi", nullptr));
+        id_lokasiLabel->setText(QCoreApplication::translate("formlokasi", "ID Lokasi", nullptr));
+        id_desaLabel->setText(QCoreApplication::translate("formlokasi", "ID Desa", nullptr));
+        id_kategoriLabel->setText(QCoreApplication::translate("formlokasi", "ID Kategori", nullptr));
+        nama_lokasiLabel->setText(QCoreApplication::translate("formlokasi", "Nama Lokasi", nullptr));
         pushButton->setText(QCoreApplication::translate("formlokasi", "Simpan", nullptr));
         pushButton_2->setText(QCoreApplication::translate("formlokasi", "Ubah", nullptr));
         pushButton_3->setText(QCoreApplication::translate("formlokasi", "Hapus", nullptr));

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>554</width>
+    <height>289</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -26,7 +26,7 @@
     <item row="0" column="0">
      <widget class="QLabel" name="id_pengunjungLabel">
       <property name="text">
-       <string>id_pengunjung</string>
+       <string>ID Pengunjung</string>
       </property>
      </widget>
     </item>
@@ -36,7 +36,7 @@
     <item row="1" column="0">
      <widget class="QLabel" name="id_lokasiLabel">
       <property name="text">
-       <string>id_lokasi</string>
+       <string>ID Lokasi</string>
       </property>
      </widget>
     </item>
@@ -46,7 +46,7 @@
     <item row="2" column="0">
      <widget class="QLabel" name="nama_pengunjungLabel">
       <property name="text">
-       <string>nama_pengunjung</string>
+       <string>Nama Pengunjung</string>
       </property>
      </widget>
     </item>
@@ -58,10 +58,10 @@
   <widget class="QPushButton" name="pushButton">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>120</y>
+     <x>390</x>
+     <y>20</y>
      <width>141</width>
-     <height>24</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -71,10 +71,10 @@
   <widget class="QPushButton" name="pushButton_2">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>120</y>
+     <x>390</x>
+     <y>40</y>
      <width>141</width>
-     <height>24</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -84,10 +84,10 @@
   <widget class="QPushButton" name="pushButton_3">
    <property name="geometry">
     <rect>
-     <x>20</x>
-     <y>150</y>
+     <x>390</x>
+     <y>60</y>
      <width>141</width>
-     <height>24</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
@@ -97,14 +97,24 @@
   <widget class="QPushButton" name="pushButton_4">
    <property name="geometry">
     <rect>
-     <x>240</x>
-     <y>150</y>
+     <x>390</x>
+     <y>80</y>
      <width>141</width>
-     <height>24</height>
+     <height>21</height>
     </rect>
    </property>
    <property name="text">
     <string>Cari</string>
+   </property>
+  </widget>
+  <widget class="QTableView" name="tablepengunjung">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>110</y>
+     <width>511</width>
+     <height>161</height>
+    </rect>
    </property>
   </widget>
  </widget>
